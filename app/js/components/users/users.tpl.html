@@ -1,0 +1,18 @@
+<tt-users-chart data-users-list="$ctrl.users"></tt-users-chart>
+
+<tt-search-posts class="tt-search-posts tt-row"
+                 data-users-list="$ctrl.users"
+                 data-selected-user="$ctrl.selectedUser"></tt-search-posts>
+
+<div class="common-table">
+    <div class="common-table-header tt-row">
+        <div class="common-table-cell tt-col-25">User name</div>
+        <div class="common-table-cell tt-col-25">Email</div>
+        <div class="common-table-cell tt-col-25">Website</div>
+        <div class="common-table-cell tt-col-12-5">Posts</div>
+        <div class="common-table-cell tt-col-12-5">Albums</div>
+    </div>
+    <div class="common-table-body">
+        <tt-user-item data-ng-repeat="user in $ctrl.users" data-user-item="user" data-on-select-user-callback="$ctrl.selectUser(newSelectedUser)"></tt-user-item>
+    </div>
+</div>

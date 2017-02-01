@@ -1,0 +1,15 @@
+<div class="popup-content-wrapper common-table">
+    <div class="common-table-header tt-row">
+        <div class="common-table-cell tt-col-25">
+            <fa name="user-circle" aria-hidden="true"></fa>
+            {{$ctrl.userName}}</div>
+        <div class="common-table-cell no-border tt-col-75">{{$ctrl.albumItem.title}}</div>
+    </div>
+
+    <div class="common-table-body">
+        <div class="common-table-row tt-row" data-ng-repeat="post in $ctrl.albumItem.rels.posts">
+            <div class="common-table-cell tt-col-25">{{post.title}}</div>
+            <div class="common-table-cell tt-col-75">{{post.body}}</div>
+        </div>
+    </div>
+</div>

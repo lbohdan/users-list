@@ -1,0 +1,16 @@
+<div class="common-table">
+    <div class="common-table-header tt-row">
+        <div class="common-table-cell tt-col-50">Post</div>
+        <div class="common-table-cell tt-col-50">Album</div>
+    </div>
+
+    <tt-show-hide-item data-is-item-fit-query="postItem.isItemFitQuery"
+                       class="common-table-body user-item-posts common-table-row tt-row"
+                       data-ng-repeat="postItem in $ctrl.postsList">
+        <div class="common-table-cell tt-col-50">{{postItem.title}}</div>
+        <div class="common-table-cell tt-col-50" data-ng-click="$ctrl.showAlbumDetails(postItem.rels.album.id)">
+            {{postItem.rels.album.id}}: {{postItem.rels.album.title}}
+        </div>
+    </tt-show-hide-item>
+</div>
+

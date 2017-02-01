@@ -1,0 +1,17 @@
+<div class="common-table-row user-item tt-row"
+     data-ng-class="{'selected': $ctrl.userItem.selected}"
+     data-ng-click="$ctrl.onClickHandler()">
+    <div class="common-table-cell tt-col-25">
+        <fa name="user-circle" aria-hidden="true"></fa>
+        <span>{{$ctrl.userItem.name}}</span>
+    </div>
+    <div class="common-table-cell tt-col-25">{{$ctrl.userItem.email}}</div>
+    <div class="common-table-cell tt-col-25">{{$ctrl.userItem.website}}</div>
+    <div class="common-table-cell tt-col-12-5">{{$ctrl.userItem.rels.postsList.length}}</div>
+    <div class="common-table-cell tt-col-12-5">{{$ctrl.userItem.rels.albumsList.length}}</div>
+</div>
+
+<tt-user-item-posts data-ng-show="!$ctrl.isCollapsed"
+                    data-user-name="$ctrl.userItem.name"
+                    data-posts-list="$ctrl.userItem.rels.postsList"
+                    data-albums-list="$ctrl.userItem.rels.albumsList"></tt-user-item-posts>
