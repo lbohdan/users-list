@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "users listing",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbohdan/users-list.git"
+  },
   "author": "Bohdan Lypkan",
   "license": "ISC",
+  "homepage": "https://github.com/lbohdan/users-list#readme",
   "devDependencies": {
     "del": "^2.2.0",
     "eslint-plugin-angular": "^1.4.1",
